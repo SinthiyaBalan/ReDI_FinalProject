@@ -1,14 +1,13 @@
 
 import './App.css';
+import Nav from './Components/Nav';
 
 function App() {
   return (
-    <div className="App">
-      <button className="btn btn-info">Info</button>
-<button className="btn btn-success">Success</button>
-<button className="btn btn-warning">Warning</button>
-<button className="btn btn-error">Error</button>
-      <p className='m-12'>Hi from React</p>
+    <div className="app min-h-screen">
+      <Nav />
+      <main>main</main>
+      <footer>footer</footer>
     </div>
   );
 }
