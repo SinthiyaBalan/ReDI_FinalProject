@@ -1,5 +1,6 @@
 
 import './App.css';
+import Footer from './Components/Footer';
 import Nav from './Components/Nav';
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
     <div className="app min-h-screen">
       <Nav />
       <main>main</main>
-      <footer>footer</footer>
+      <Footer />
     </div>
   );
 }
