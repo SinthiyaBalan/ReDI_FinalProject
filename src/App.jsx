@@ -1,13 +1,13 @@
 
 import './App.css';
-import Footer from './Components/Footer';
-import Nav from './Components/Nav';
+import Footer from './components/Footer';
+import Nav from './components/Nav';
 
 function App() {
   return (
-    <div className="app min-h-screen">
+    <div data-theme="cupcake" className="app min-h-screen">
       <Nav />
-      <main>main</main>
+      
       <Footer />
     </div>
   );
