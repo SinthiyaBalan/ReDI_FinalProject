@@ -2,6 +2,7 @@ import React from 'react'
 
 function Nav() {
   return (
+    <>
     <div className="navbar bg-primary text-primary-content">
   <div className="navbar-start">
     <div className="dropdown">
@@ -19,12 +20,12 @@ function Nav() {
     </div>
   </div>
   <div className="navbar-center">
-    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+    <a className="btn btn-ghost normal-case text-xl">newbie</a>
   </div>
 
   
   <div className="navbar-end">
-  <ion-icon name="person-outline"></ion-icon>
+  <button className="btn btn-ghost btn-circle"><ion-icon  name="person-outline"></ion-icon></button>
   <div class="flex-none">
     <div class="dropdown dropdown-end">
       <label tabindex="0" class="btn btn-ghost btn-circle">
@@ -51,6 +52,25 @@ function Nav() {
     
   </div>
 </div>
+
+<div className="navbar-center hidden lg:flex">
+    <ul className="menu menu-horizontal px-1">
+      <li><a>Baby Toys</a></li>
+      <li tabIndex={0}>
+        <details>
+          <summary>Stroller</summary>
+          <ul className="p-2">
+            <li><a>Submenu 1</a></li>
+            <li><a>Submenu 2</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a>Baby Gifts</a></li>
+      <li><a>Furniture</a></li>
+    </ul>
+  </div>
+</>
+
   )
 }
 
