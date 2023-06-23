@@ -1,0 +1,183 @@
+{
+    "admin": {
+      "email": "a@mail.com",
+      "password": "1234"
+    },
+    "products": [
+      {
+        "id": 1,
+        "name": "Music Play Set",
+        "brand": "Chicco",
+        "category": "Baby Toys",
+        "price": 44,
+        "quantity": 22,
+        "description":"By playing with our percussion instruments, your kids develop collaborative skills. Our kids musical instruments for kids keeps family together.",
+        "pics": ["https://ik.imagekit.io/onziiwamr/Baby_Toys/music_set1.webp?updatedAt=1686835391140", "https://ik.imagekit.io/onziiwamr/Baby_Toys/music_set2.webp?updatedAt=1686835391057","https://ik.imagekit.io/onziiwamr/Baby_Toys/music_set3.webp?updatedAt=1686835390930","https://ik.imagekit.io/onziiwamr/Baby_Toys/music_set4.webp?updatedAt=1686835391077"]
+      },
+      {
+        "id": 2,
+        "name": "Motor Skills Cube Safari",
+        "brand": "SMALL FOOT",
+        "category": "Baby Toys",
+        "price": 36.99,
+        "quantity": 10,
+        "description":"If you're looking for a great gift for a toddler, then you'll love our montessori early learning sorting stacking toys.",
+        "pics": ["https://ik.imagekit.io/onziiwamr/Baby_Toys/motor1.webp?updatedAt=1686835635271" ,"https://ik.imagekit.io/onziiwamr/Baby_Toys/motor2.webp?updatedAt=1686835635270","https://ik.imagekit.io/onziiwamr/Baby_Toys/motor3.webp?updatedAt=1686835635259","https://ik.imagekit.io/onziiwamr/Baby_Toys/motor4.webp?updatedAt=1686835635300"]
+    },
+    {
+        "id": 3,
+        "name": "Wooden Train Set",
+        "brand": "EICHHORN",
+        "category": "Baby Toys",
+        "price": 14.99,
+        "quantity": 10,
+        "description":"Easily create bridge connections, overpasses, tunnels, cross sections, and more",
+        "pics": ["https://ik.imagekit.io/onziiwamr/Baby_Toys/wood1.avif?updatedAt=1686849346490" ,"https://ik.imagekit.io/onziiwamr/Baby_Toys/wood2.avif?updatedAt=1686849346565","https://ik.imagekit.io/onziiwamr/Baby_Toys/wood3.avif?updatedAt=1686849346461","https://ik.imagekit.io/onziiwamr/Baby_Toys/wood4.avif?updatedAt=1686849346500"]
+    },
+    {
+        "id": 4,
+        "name": "Mario game set",
+        "brand": "EICHHORN",
+        "category": "Baby Toys",
+        "price": 39.99,
+        "quantity": 10,
+        "description":"Fans can discover the super fun Lego Super Mario universe with the Mario Adventure starter set.",
+        "pics": ["https://ik.imagekit.io/onziiwamr/Baby_Toys/mario2.avif?updatedAt=1686850021548" ,"https://ik.imagekit.io/onziiwamr/Baby_Toys/Mario1.avif?updatedAt=1686850021623","https://ik.imagekit.io/onziiwamr/Baby_Toys/mario3.avif?updatedAt=1686850021586","https://ik.imagekit.io/onziiwamr/Baby_Toys/mario4.avif?updatedAt=1686850021624"]
+    },
+    {
+        "id": 5,
+        "name": "sand play set",
+        "brand": "FILIBABBA",
+        "category": "Baby Toys",
+        "price": 7.29,
+        "quantity": 10,
+        "description":"High-quality sand toy - ideal for sand and water games.Suitable for children aged 18 months and above.",
+        "pics": ["https://ik.imagekit.io/onziiwamr/Baby_Toys/sand.jpg?updatedAt=1686853900163" ,"https://ik.imagekit.io/onziiwamr/Baby_Toys/sand1.jpg?updatedAt=1686853900159","https://ik.imagekit.io/onziiwamr/Baby_Toys/sand2.jpg?updatedAt=1686853900179","https://ik.imagekit.io/onziiwamr/Baby_Toys/sand3.jpg?updatedAt=1686853900158"]
+    },
+    {
+        "id": 6,
+        "name": "Cabin Bed",
+        "brand": "BabyBay",
+        "category": "Furniture",
+        "price": 310.89,
+        "quantity": 24,
+        "description":"The bed is made entirely of MDF and painted chalk white and the sides of the bed are made of oak-Bordeaux imitation.",
+        "pics": ["https://ik.imagekit.io/onziiwamr/Furniture/bett2.webp?updatedAt=1686854398857", "https://ik.imagekit.io/onziiwamr/Furniture/bett3.webp?updatedAt=1686854398755","https://ik.imagekit.io/onziiwamr/Furniture/bett1.webp?updatedAt=1686854398939","https://ik.imagekit.io/onziiwamr/Furniture/bett4.webp?updatedAt=1686854398790"]
+      },
+      {
+        "id": 7,
+        "name": "Storage Shelf",
+        "brand": "BabyWalz",
+        "category": "Furniture",
+        "price": 110.29,
+        "quantity": 4,
+        "description":"The assembly of this toy organiser can be completed in no time at all.",
+        "pics": ["https://ik.imagekit.io/onziiwamr/Furniture/f1.jpg?updatedAt=1686854693703", "https://ik.imagekit.io/onziiwamr/Furniture/f2.jpg?updatedAt=1686854693723","https://ik.imagekit.io/onziiwamr/Furniture/f3.jpg?updatedAt=1686854693671","https://ik.imagekit.io/onziiwamr/Furniture/f4.jpg?updatedAt=1686854693372"]
+      },
+      {
+        "id": 8,
+        "name": "Game Spiral Safari",
+        "brand": "FAWN",
+        "category": "Stroller",
+        "price": 649.99,
+        "quantity": 20,
+        "description":"Attach the loop to the stroller for lots of entertainment on the go.",
+        "pics": ["https://ik.imagekit.io/onziiwamr/Stroller/stroller1.webp?updatedAt=1686829065446", "https://ik.imagekit.io/onziiwamr/Stroller/stroller2.webp?updatedAt=1686829065440","https://ik.imagekit.io/onziiwamr/Stroller/stroller3.webp?updatedAt=1686829065457","https://ik.imagekit.io/onziiwamr/Stroller/stroller4.webp?updatedAt=1686829065438"]
+      },
+      {
+        "id": 9,
+        "name": "Combi stroller",
+        "brand": "JOIE",
+        "category": "Stroller",
+        "price": 649.99,
+        "quantity": 20,
+        "description":"The buggy folds easily into a small package . So you can always take your favorite buggy with you wherever you go!",
+        "pics": ["https://ik.imagekit.io/onziiwamr/Stroller/stroller.webp?updatedAt=1686826652976", "https://ik.imagekit.io/onziiwamr/Stroller/image1.webp?updatedAt=1686826650892","https://ik.imagekit.io/onziiwamr/Stroller/image2.webp?updatedAt=1686826814748","https://ik.imagekit.io/onziiwamr/Stroller/image3.webp?updatedAt=1686826829055"]
+      },
+      {
+        "id": 10,
+        "name": "BUGGYBUCH SAILORS",
+        "brand": "TINY LOVE",
+        "category": "Stroller",
+        "price": 16.99,
+        "quantity": 10,
+        "description":"Rattling, crackling fabrics and a life ring shaped mirror.",
+        "pics": ["https://ik.imagekit.io/onziiwamr/buggy_buch/buch1.webp?updatedAt=1686827972291", "https://ik.imagekit.io/onziiwamr/buggy_buch/buch2.webp?updatedAt=1686827979817","https://ik.imagekit.io/onziiwamr/buggy_buch/buch3.webp?updatedAt=1686827977227","https://ik.imagekit.io/onziiwamr/buggy_buch/buch4.webp?updatedAt=1686827974664"]
+      },
+      {
+        "id": 11,
+        "name": "Born Lucky Buggy",
+        "brand": "TINY LOVE",
+        "category": "Stroller",
+        "price": 16.99,
+        "quantity": 10,
+        "description":"The buggy folds easily into a small package . So you can always take your favorite buggy with you wherever you go!",
+        "pics": ["https://ik.imagekit.io/onziiwamr/Stroller/stroller1.webp?updatedAt=1686829065446","https://ik.imagekit.io/onziiwamr/Stroller/stroller2.webp?updatedAt=1686829065440","https://ik.imagekit.io/onziiwamr/Stroller/stroller3.webp?updatedAt=1686829065457","https://ik.imagekit.io/onziiwamr/Stroller/stroller4.webp?updatedAt=1686829065438"]
+      },
+      {
+        "id": 12,
+        "name": "Newborn Gift Box",
+        "brand": "TINY LOVE",
+        "category": "Baby Gifts",
+        "price": 14.99,
+        "quantity": 10,
+        "description":"Organic cotton – we use only the highest quality organic cotton for our gift sets",
+        "pics": ["https://ik.imagekit.io/onziiwamr/Gift_box/giftbox4.avif?updatedAt=1686833744181","https://ik.imagekit.io/onziiwamr/Gift_box/giftbox6.avif?updatedAt=1686833744109","https://ik.imagekit.io/onziiwamr/Gift_box/giftbox5.avif?updatedAt=1686833744034","https://ik.imagekit.io/onziiwamr/Gift_box/giftbox3.webp?updatedAt=1686833744053"]
+      },
+      {
+        "id": 13,
+        "name": "Boho Unisex Baby Gift Set",
+        "brand": "Boho",
+        "category": "Baby Gifts",
+        "price": 36.99,
+        "quantity": 10,
+        "description":"This set is a perfect all-rounder for everyday use.",
+        "pics": ["https://ik.imagekit.io/onziiwamr/Gift_box/giftboxset1.webp?updatedAt=1686833502886","https://ik.imagekit.io/onziiwamr/Gift_box/giftboxset2.webp?updatedAt=1686833502789","https://ik.imagekit.io/onziiwamr/Gift_box/giftboxset3.webp?updatedAt=1686833502677","https://ik.imagekit.io/onziiwamr/Gift_box/giftboxset4.webp?updatedAt=1686833502886"]
+      },
+      {
+        "id": 14,
+        "name": "Baby Gift Set",
+        "brand": "Boho",
+        "category": "Baby Gifts",
+        "price": 36.99,
+        "quantity": 10,
+        "description":"Cuddly soft, breathable and skin-friendly fabric nestles comfortably against the delicate baby skin",
+        "pics": ["https://ik.imagekit.io/onziiwamr/Gift_box/giftbox2.webp?updatedAt=1686834127002","https://ik.imagekit.io/onziiwamr/Gift_box/giftbox2.1.webp?updatedAt=1686834126850","https://ik.imagekit.io/onziiwamr/Gift_box/giftbox2.2.webp?updatedAt=1686834126799","https://ik.imagekit.io/onziiwamr/Gift_box/giftbox2.3.webp?updatedAt=1686834126881"]
+      }
+    ],
+    "categories": ["Baby Gifts","Stroller","Furniture","Baby Toys"],
+    "brands": ["Boho","TINY LOVE","FAWN","JOIE","FAWN","BabyWalz","BabyBay","FILIBABBA","SMALL FOOT","EICHHORN","Chicco"],
+    "payments": ["paypal","Credit card", "Debit card"],
+    "orders": [
+      {
+        "id": 1,
+        "client": "John",
+        "payment": "Paypal",
+        "total": "440"
+      },
+      {
+        "id": 2,
+        "client": "Sarah",
+        "payment": "Debit card",
+        "total": "40"
+      },
+      {
+        "id": 3,
+        "client": "Athiyan",
+        "payment": "Credit card",
+        "total": "70"
+      },
+      {
+        "id": 4,
+        "client": "Sam",
+        "payment": "Paypal",
+        "total": "45.99"
+      },
+      {
+        "id": 5,
+        "client": "Liya",
+        "payment": "Debit card",
+        "total": "234"
+      }
+    ]
+  }

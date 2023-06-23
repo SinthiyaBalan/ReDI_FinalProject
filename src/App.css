@@ -42,3 +42,13 @@ ion-icon{
     background-color: rgb(86, 84, 94);
     color: white;
 }
+
+/* .product-details-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+} */
+.product-details{
+    color: red;
+}
