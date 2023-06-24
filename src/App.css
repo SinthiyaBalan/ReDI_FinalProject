@@ -43,12 +43,23 @@ ion-icon{
     color: white;
 }
 
-/* .product-details-container{
+.product-details-container{
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+}
+.product-details{
+    color: black;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-} */
-.product-details{
-    color: red;
+}
+
+.prod-quantity{
+    display: flex;
+    flex-direction:row;
+    gap: 10px;
 }

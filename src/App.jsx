@@ -7,6 +7,7 @@ import {Routes , Route} from 'react-router-dom'
 import ProductList from './components/ProductList';
 import { useState } from 'react';
 import ProductDetails from './components/ProductDetails';
+import ShoppingCart from './components/ShoppingCart';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
           <Route path='/' element={<MainSection setCategories={setCategories} categories={categories} setSelectedCategory = {setSelectedCategory}/>} />
           <Route path='/productList' element={<ProductList products={products} setProducts={setProducts} selectedCategory={selectedCategory} setSelectedProduct = {setSelectedProduct} />} />
           <Route path='/productDetails' element = {<ProductDetails selectedProduct = {selectedProduct}/>} />
+          <Route path='/shoppingCart' element = {<ShoppingCart />} />
         </Routes>
       <Footer />
     </div>
