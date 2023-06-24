@@ -2,7 +2,7 @@ import React from "react";
 import data from "../data.json";
 import {useNavigate} from 'react-router-dom'
 
-function ProductDetails({ selectedProduct }) {
+function ProductDetails({ selectedProduct , setQty}) {
 
   const navigate = useNavigate();
   // console.log("product Id", selectedProduct);
@@ -11,8 +11,14 @@ function ProductDetails({ selectedProduct }) {
 
   // console.log(product);
 
-  function addToCartHandler(){
-    console.log("Inside handler");
+  const setQtyHandler = (e) => {
+   
+    setQty(e.target.value);
+    console.log(e.target.value);
+  };
+
+  function addToCartHandler(e){
+    console.log("Inside handler", e);
     navigate('/shoppingCart');
   }
 
@@ -61,8 +67,8 @@ function ProductDetails({ selectedProduct }) {
           <h2>€{i.price}</h2>
           <div className="prod-quantity">
           <h4>Quantity </h4>:
-          <input type="number" name="quantity" id="quantity" min={1} max={10} /> </div><br /><br />
-          <button className = "btn btn-primary" onClick= {addToCartHandler}>Add to Cart</button>
+          <input type="number" name="quantity" id="quantity" min={1} max={10} onChange={setQtyHandler} /> </div><br /><br />
+          <button className = "btn btn-primary" onClick= {(e) => {addToCartHandler(e);}}>Add to Cart</button>
          
          
 
