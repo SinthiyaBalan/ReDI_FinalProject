@@ -2,12 +2,12 @@ import React from "react";
 import data from "../data.json";
 import {useNavigate} from 'react-router-dom'
 
-function ProductDetails({ selectedProduct , setQty}) {
+function ProductDetails({ selectedProductId , setQty , setCart }) {
 
   const navigate = useNavigate();
   // console.log("product Id", selectedProduct);
 
-  const product = data.products.filter((i) => i.id == selectedProduct);
+  const product = data.products.filter((i) => i.id == selectedProductId);
 
   // console.log(product);
 
@@ -19,6 +19,7 @@ function ProductDetails({ selectedProduct , setQty}) {
 
   function addToCartHandler(e){
     console.log("Inside handler", e);
+    setCart(product)
     navigate('/shoppingCart');
   }
 

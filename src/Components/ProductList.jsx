@@ -3,7 +3,7 @@ import data from '../data.json'
 import {useNavigate} from 'react-router-dom'
 import axios from 'axios';
 
-function ProductList({selectedCategory ,setSelectedProduct, products, setProducts}) {
+function ProductList({selectedCategory ,setSelectedProductId, products, setProducts}) {
 
     const navigate = useNavigate();
     useEffect(() => {
@@ -29,7 +29,7 @@ function ProductList({selectedCategory ,setSelectedProduct, products, setProduct
                     <p>Description: {i.description}</p>
                     <div className="card-actions justify-end">
                         <button className="btn btn-primary" onClick={ () => {
-                            setSelectedProduct(i.id);
+                            setSelectedProductId(i.id);
                             navigate('/productDetails')
                         }
 

@@ -12,19 +12,20 @@ import ShoppingCart from './components/ShoppingCart';
 function App() {
 
   const [selectedCategory, setSelectedCategory] = useState();
-  const [selectedProduct, setSelectedProduct] = useState();
+  const [selectedProductId, setSelectedProductId] = useState();
   const [categories, setCategories] = useState();
   const [products, setProducts] = useState();
-  const [qty, setQty] = useState()
+  const [qty, setQty] = useState();
+  const [cart, setCart] = useState()
 
   return (
     <div data-theme="cupcake" className="app min-h-screen">
       <Nav />
         <Routes >
           <Route path='/' element={<MainSection setCategories={setCategories} categories={categories} setSelectedCategory = {setSelectedCategory}/>} />
-          <Route path='/productList' element={<ProductList products={products} setProducts={setProducts} selectedCategory={selectedCategory} setSelectedProduct = {setSelectedProduct} />} />
-          <Route path='/productDetails' element = {<ProductDetails selectedProduct = {selectedProduct} setQty = {setQty}/>} />
-          <Route path='/shoppingCart' element = {<ShoppingCart selectedProduct = {selectedProduct} qty = {qty}/>} />
+          <Route path='/productList' element={<ProductList products={products} setProducts={setProducts} selectedCategory={selectedCategory} setSelectedProductId = {setSelectedProductId} />} />
+          <Route path='/productDetails' element = {<ProductDetails selectedProductId = {selectedProductId} setQty = {setQty} setCart = {setCart}/>} />
+          <Route path='/shoppingCart' element = {<ShoppingCart selectedProductId = {selectedProductId} qty = {qty} products = {products} cart={cart} setCart = {setCart}/>} />
         </Routes>
       <Footer />
     </div>
