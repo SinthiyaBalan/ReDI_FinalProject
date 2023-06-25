@@ -16,6 +16,13 @@ ion-icon{
     background-color: #d5bbbc;
 }
 
+.logo{
+    /* background-image: url("C:\Users\Sinthiya\Pictures\Screenshots\logo-babySweets.jpg"); */
+    background-image: url("C:\Users\Sinthiya\Pictures\Screenshots\Screenshot 2023-06-24 224647.png");
+    width: 240px;
+    height: 100px;
+    background-position: center;
+}
 .category-section{
     display: flex;
     flex-direction: row;

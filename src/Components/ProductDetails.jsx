@@ -2,14 +2,11 @@ import React from "react";
 import data from "../data.json";
 import {useNavigate} from 'react-router-dom'
 
+
 function ProductDetails({ selectedProductId , setQty , setCart }) {
 
   const navigate = useNavigate();
-  // console.log("product Id", selectedProduct);
-
   const product = data.products.filter((i) => i.id == selectedProductId);
-
-  // console.log(product);
 
   const setQtyHandler = (e) => {
    
@@ -18,7 +15,16 @@ function ProductDetails({ selectedProductId , setQty , setCart }) {
   };
 
   function addToCartHandler(e){
-    console.log("Inside handler", e);
+    
+    let cartItems = (sessionStorage.getItem('cart'));
+    if(cartItems) {
+      let cartProducts = JSON.parse(cartItems);
+      cartProducts.push(product[0]);
+      sessionStorage.setItem('cart', JSON.stringify(cartProducts));
+    }else  {
+      cartItems = product;
+      sessionStorage.setItem('cart', JSON.stringify(cartItems));
+    }
     setCart(product)
     navigate('/shoppingCart');
   }
