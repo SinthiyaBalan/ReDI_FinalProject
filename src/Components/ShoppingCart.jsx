@@ -1,35 +1,49 @@
 import React from 'react'
 import {useNavigate} from 'react-router-dom'
 
-function ShoppingCart({selectedProductId ,qty ,products , cart , setCart}) {
+function ShoppingCart({ cartItem , setCartItem}) {
 
   const navigate = useNavigate();
-  console.log(cart);
-  console.log('local stg:',(sessionStorage.getItem('cart')));
-  const productsInCart = JSON.parse(sessionStorage.getItem('cart'));
+  console.log(cartItem);
+  // console.log('local stg:',(localStorage.getItem('cart')));
+  // const productsInCart = JSON.parse(localStorage.getItem('cart'));
   // console.log(cart.map( i => i.name));
   return (
     <div className='shopping-cart-wrapper'> 
-      <h2>Shopping Cart</h2>
+      
+        <h2 className='cart-heading'>Your Shopping Cart</h2>
 
     
-      {productsInCart && productsInCart.map(i => <div>{i.name}
-      <div>
-      <img src={i.pics[0]}/>
-      </div>
-      <div className='cart-details'>
+      {/* {productsInCart && productsInCart.map(i => <div>{i.name} */}
+        {cartItem && cartItem.map( (i ,index) => <div className='cart-wrapper' key={index} >
+        <div className='cart-img'>
+           <img src={i.pics[0]}/>
+        </div>
+      <div className='cart-details-first'>
         <div className="prod-name">{i.name}</div>
-        <div className='price'>{i.price}</div>
+        <div className='price'>€{i.price}</div>
       </div> 
-      <div className='cart-details'>
-        <div className="cart-amount"><h2>€40</h2></div>
-        <div className='Qty'><h4>Quantity</h4> <span>{qty}</span></div>
+      <div className='cart-details-second'>
+        <div className="cart-amount"><h2 className='total-amount'>€ {Number(i.price) * Number(i.quantity)}</h2></div>
+        <div className='t-qty'><h4>Quantity : </h4> <span>{i.quantity}</span>  <button className='btn-remove'>Remove</button></div>
       </div>
       </div>
         )}
-        
-<button onClick={() =>{navigate('/')}}>Continue Shopping</button>
-<button onClick={() =>{navigate('/payment')}}>Go to Checkout</button>
+   <div className='btn-wrapper'>
+   <button className="btn btn-primary" onClick={() =>{navigate('/')}}>Continue Shopping</button>
+<button className="btn btn-primary" onClick={() =>{navigate('/payment')}}>Go to Payment</button>
+    </div> 
+
+    <div className= "final-amountWrapper">
+      <div>
+        <h4 className='final-amount'>Total Inclv VAT </h4> <span>€400</span>
+        <h3>Shipping by DHL for free</h3>
+      </div>
+
+      
+      
+      </div> 
+
 </div> 
     
   )

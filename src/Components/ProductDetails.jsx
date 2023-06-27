@@ -1,32 +1,53 @@
-import React from "react";
+import React ,{useEffect} from "react";
 import data from "../data.json";
-import {useNavigate} from 'react-router-dom'
+import {useNavigate } from 'react-router-dom'
 
 
-function ProductDetails({ selectedProductId , setQty , setCart }) {
+function ProductDetails({ cartItem, selectedProductId , qty,  setQty , setCartItem ,product ,products ,setProduct}) {
 
   const navigate = useNavigate();
-  const product = data.products.filter((i) => i.id == selectedProductId);
+  
+  useEffect(() => {
+    
+    setProduct(products.find((i) => i.id == selectedProductId))
+  }, []);
+
+  
 
   const setQtyHandler = (e) => {
    
-    setQty(e.target.value);
+    setQty(Number(e.target.value));
     console.log(e.target.value);
   };
 
   function addToCartHandler(e){
-    
-    let cartItems = (sessionStorage.getItem('cart'));
-    if(cartItems) {
-      let cartProducts = JSON.parse(cartItems);
-      cartProducts.push(product[0]);
-      sessionStorage.setItem('cart', JSON.stringify(cartProducts));
-    }else  {
-      cartItems = product;
-      sessionStorage.setItem('cart', JSON.stringify(cartItems));
+
+    const available = cartItem.find(i => i.id == product.id)
+    if (available) {
+      // alert("found")
+      const newArray = cartItem.filter(i => i.id != product.id)
+      setCartItem(newArray)
+      product.quantity = Number(qty) + Number(available.quantity)
+      setCartItem(i => [...i, product])
+      console.log(cartItem[0].quantity);
+    } else {
+
+      product.quantity = qty
+      setCartItem(i => [...i, product])
     }
-    setCart(product)
-    navigate('/shoppingCart');
+    
+    console.log("cartItem",cartItem);
+    // let cartItems = (localStorage.getItem('cart'));
+    // if(cartItems) {
+    //   let cartProducts = JSON.parse(cartItems);
+    //   cartProducts.push(product[0]);
+    //   localStorage.setItem('cart', JSON.stringify(cartProducts));
+    // }else  {
+    //   cartItems = product;
+    //   localStorage.setItem('cart', JSON.stringify(cartItems));
+    // }
+   
+    // navigate('/shoppingCart');
   }
 
   return (
@@ -35,19 +56,18 @@ function ProductDetails({ selectedProductId , setQty , setCart }) {
       <div className="carousel w-96 h-96 mt-10 ml-10 p-15">
         <div id="item1" className="carousel-item w-96">
           {product &&
-            product.map((i) => <img src={i.pics[0]} className="w-full" />)}
+            <img src={product.pics[0]} className="w-full" />}
         </div>
         <div id="item2" className="carousel-item w-full">
           {product &&
-            product.map((i) => <img src={i.pics[1]} className="w-full" />)}
+            <img src={product.pics[1]} className="w-full" />}
         </div>
         <div id="item3" className="carousel-item w-full">
-          {product &&
-            product.map((i) => <img src={i.pics[2]} className="w-full" />)}
+          {product && <img src={product.pics[2]} className="w-full" />}
         </div>
         <div id="item4" className="carousel-item w-full">
           {product &&
-            product.map((i) => <img src={i.pics[3]} className="w-full" />)}
+            <img src={product.pics[3]} className="w-full" />}
         </div>
       </div>
       <div className="flex justify-center w-96 py-2 gap-2 ml-10">
@@ -67,20 +87,26 @@ function ProductDetails({ selectedProductId , setQty , setCart }) {
       </div>
       
 
-      <div className="product-details">
+      <div>
         {product &&
-          product.map((i) => <div> <h2 className="prod-name">{i.name}</h2>
-          <h4>{i.brand}</h4>
-          <h2>€{i.price}</h2>
+          <div className="product-details"> <h1 className="prod-name">{product.name}</h1>
+          <h4 className="prod-brand">{product.brand}</h4>
+          <h2 className="prod-price">€{product.price}</h2>
+          <p className="prod-desc">{product.description}</p><br />
           <div className="prod-quantity">
           <h4>Quantity </h4>:
-          <input type="number" name="quantity" id="quantity" min={1} max={10} onChange={setQtyHandler} /> </div><br /><br />
-          <button className = "btn btn-primary" onClick= {(e) => {addToCartHandler(e);}}>Add to Cart</button>
-         
+          <input type="number" name="quantity" id="quantity"  min={1} max={10} onChange={setQtyHandler} /> </div><br />
+          <div className="product-btn">
+            <button className = "btn btn-primary" onClick= {(e) => {addToCartHandler(e)}}>Add to Cart</button>
+          <button className = "btn btn-primary" onClick={ () => 
+                            
+                            navigate('/shoppingCart')
+                        }>Go to CheckOut</button>
+          </div>
          
 
           </div>
-          )}
+          }
       </div>
     </div>
   );
