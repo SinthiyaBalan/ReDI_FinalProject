@@ -31,18 +31,23 @@ function ShoppingCart({ cartItem , setCartItem}) {
         )}
    <div className='btn-wrapper'>
    <button className="btn btn-primary" onClick={() =>{navigate('/')}}>Continue Shopping</button>
-<button className="btn btn-primary" onClick={() =>{navigate('/payment')}}>Go to Payment</button>
+
     </div> 
 
     <div className= "final-amountWrapper">
-      <div>
-        <h4 className='final-amount'>Total Inclv VAT </h4> <span>€400</span>
-        <h3>Shipping by DHL for free</h3>
+      <div className='famount-wrapper'>
+        <h4 >Total Inclv VAT </h4> 
+        <h2 className='final-amount'>€400</h2>
       </div>
+      
+      <h3 className='shipping-info'>You are eligible for free delivery.</h3>
+      <button className="btn btn-primary" onClick={() =>{navigate('/payment')}}>Go to Checkout</button>
+       
+    </div>
 
       
       
-      </div> 
+      
 
 </div> 
     
