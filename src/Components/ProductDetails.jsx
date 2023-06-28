@@ -3,7 +3,7 @@ import data from "../data.json";
 import {useNavigate } from 'react-router-dom'
 
 
-function ProductDetails({ cartItem, selectedProductId , qty,  setQty , setCartItem ,product ,products ,setProduct}) {
+function ProductDetails({ cartItem, selectedProductId , qty,  setQty , setCartItem ,product ,products ,setProduct ,defaultqty}) {
 
   const navigate = useNavigate();
   
@@ -87,7 +87,7 @@ function ProductDetails({ cartItem, selectedProductId , qty,  setQty , setCartIt
       </div>
       
 
-      <div>
+      <div >
         {product &&
           <div className="product-details"> <h1 className="prod-name">{product.name}</h1>
           <h4 className="prod-brand">{product.brand}</h4>
@@ -95,7 +95,7 @@ function ProductDetails({ cartItem, selectedProductId , qty,  setQty , setCartIt
           <p className="prod-desc">{product.description}</p><br />
           <div className="prod-quantity">
           <h4>Quantity </h4>:
-          <input type="number" name="quantity" id="quantity"  min={1} max={10} onChange={setQtyHandler} /> </div><br />
+          <input type="number" name="quantity" id="quantity" value={qty}  min={1} max={10} onChange={setQtyHandler} /> </div><br />
           <div className="product-btn">
             <button className = "btn btn-primary" onClick= {(e) => {addToCartHandler(e)}}>Add to Cart</button>
           <button className = "btn btn-primary" onClick={ () => 

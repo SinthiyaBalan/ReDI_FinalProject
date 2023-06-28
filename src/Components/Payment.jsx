@@ -30,22 +30,30 @@ function Payment() {
     <option value="audi">Google Pay</option>
   </select></label>
   <label for="lname">Card Number:
-  <input type="text" id="lname" name="lname" value="" /></label>
+  <input type="text" id="lname" name="lname" value="" /></label></form> 
   <button className= "btn btn-primary mb-10 w-36 ml-12" onClick={()=>window.my_modal_5.showModal()}>Place Order</button>
 
-
+  {/* <dialog id="my_modal_2" className="modal">
+  <form method="dialog" className="modal-box">
+    <h3 className="font-bold text-lg">Hello!</h3>
+    <p className="py-4">Press ESC key or click outside to close</p>
+  </form>
+  <form method="dialog" className="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog> */}
   {/* <button className="btn" onClick={()=>window.my_modal_5.showModal()}>open modal</button> */}
 <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
   <form method="dialog" className="modal-box">
     <h3 className="font-bold text-lg">Hello!</h3>
     <p className="py-4">Your Order # 2334579911 is placed successfully. Check your Email for tracking details</p>
     <div className="modal-action">
-      {/* if there is a button in form, it will close the modal */}
+      
       <button className="btn" onClick={ () => navigate('/')}>Close</button>
     </div>
   </form>
 </dialog>
-</form> 
+
     </div>
   )
 }

@@ -1,6 +1,9 @@
-import React from 'react'
+import React from 'react';
+import {useNavigate} from 'react-router-dom'
 
 function Nav() {
+
+  const navigate = useNavigate();
   return (
     <>
     <div className="navbar bg-primary text-primary-content">
@@ -26,7 +29,7 @@ function Nav() {
 
   
   <div className="navbar-end">
-  <button className="btn btn-ghost btn-circle"><ion-icon  name="person-outline"></ion-icon></button>
+  <button className="btn btn-ghost btn-circle" onClick={ () => navigate('/adminLoginPage')}><ion-icon  name="person-outline"></ion-icon></button>
   <div className="flex-none">
     <div className="dropdown dropdown-end">
       <label tabIndex="0" className="btn btn-ghost btn-circle">

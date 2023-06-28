@@ -17,10 +17,14 @@ function MainSection({setSelectedCategory, setCategories, categories}) {
     }, [])
   return (
     <div>
+      
         <h4 className='home_title'>Welcome to the magic world of Newbie</h4>
-        <div className='category-section'>
-          {categories&& categories.map((i ,index) => <img   onClick={(e) => category(e)} src={i.pic} alt={i.name} />)}
-          
+        <div className='category-section min-h-screen'>
+          {/* {categories&& categories.map((i ,index) => <img   onClick={(e) => category(e)} src={i.pic} alt={i.name} />)} */}
+          {categories ? categories.map((i ,index) => <img   onClick={(e) => category(e)} src={i.pic} alt={i.name} />):
+
+            <span className="loading loading-dots loading-lg"></span>
+          }
           
 
 

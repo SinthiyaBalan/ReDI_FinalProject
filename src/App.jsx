@@ -11,6 +11,7 @@ import ShoppingCart from './components/ShoppingCart';
 import Payment from './components/Payment';
 import React, { useEffect } from 'react';
 import axios from 'axios';
+import AdminLogin from './components/AdminLogin';
 
 function App() {
 
@@ -18,7 +19,8 @@ function App() {
   const [selectedProductId, setSelectedProductId] = useState();
   const [categories, setCategories] = useState();
   const [products, setProducts] = useState();
-  const [qty, setQty] = useState();
+  const [qty, setQty] = useState(1);
+  const [defaultqty, setDefaultqty] = useState()
   const [cartItem, setCartItem] = useState([]);
   const [product, setProduct] = useState();
 
@@ -37,9 +39,10 @@ function App() {
         <Routes >
           <Route path='/' element={<MainSection setCategories={setCategories} categories={categories} setSelectedCategory = {setSelectedCategory}/>} />
           <Route path='/productList' element={<ProductList products={products} selectedCategory={selectedCategory} setSelectedProductId = {setSelectedProductId} />} />
-          <Route path='/productDetails' element = {<ProductDetails cartItem={cartItem} selectedProductId = {selectedProductId} qty={qty} setQty = {setQty} setCartItem = {setCartItem} product = {product} products={products} setProduct={setProduct}/>} />
+          <Route path='/productDetails' element = {<ProductDetails cartItem={cartItem} selectedProductId = {selectedProductId} qty={qty} defaultqty = {defaultqty} setQty = {setQty} setCartItem = {setCartItem} product = {product} products={products} setProduct={setProduct}/>} />
           <Route path='/shoppingCart' element = {<ShoppingCart   cartItem={cartItem} setCartItem = {setCartItem}/>} />
           <Route path='/payment' element = {<Payment />} />
+          <Route path='/adminLoginPage' element = {<AdminLogin />}/>
         </Routes>
       <Footer />
     </div>
