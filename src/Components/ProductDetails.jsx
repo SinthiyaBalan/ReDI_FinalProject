@@ -1,9 +1,9 @@
 import React ,{useEffect} from "react";
-import data from "../data.json";
+
 import {useNavigate } from 'react-router-dom'
 
 
-function ProductDetails({ cartItem, selectedProductId , qty,  setQty , setCartItem ,product ,products ,setProduct ,defaultqty}) {
+function ProductDetails({ cartItem, selectedProductId , qty,  setQty , setCartItem ,product ,products ,setProduct }) {
 
   const navigate = useNavigate();
   
@@ -24,7 +24,7 @@ function ProductDetails({ cartItem, selectedProductId , qty,  setQty , setCartIt
 
     const available = cartItem.find(i => i.id == product.id)
     if (available) {
-      // alert("found")
+
       const newArray = cartItem.filter(i => i.id != product.id)
       setCartItem(newArray)
       product.quantity = Number(qty) + Number(available.quantity)
@@ -37,17 +37,7 @@ function ProductDetails({ cartItem, selectedProductId , qty,  setQty , setCartIt
     }
     
     console.log("cartItem",cartItem);
-    // let cartItems = (localStorage.getItem('cart'));
-    // if(cartItems) {
-    //   let cartProducts = JSON.parse(cartItems);
-    //   cartProducts.push(product[0]);
-    //   localStorage.setItem('cart', JSON.stringify(cartProducts));
-    // }else  {
-    //   cartItems = product;
-    //   localStorage.setItem('cart', JSON.stringify(cartItems));
-    // }
-   
-    // navigate('/shoppingCart');
+    
   }
 
   return (
@@ -95,7 +85,7 @@ function ProductDetails({ cartItem, selectedProductId , qty,  setQty , setCartIt
           <p className="prod-desc">{product.description}</p><br />
           <div className="prod-quantity">
           <h4>Quantity </h4>:
-          <input type="number" name="quantity" id="quantity" value={qty}  min={1} max={10} onChange={setQtyHandler} /> </div><br />
+          <input type="number" name="quantity" id="quantity" defaultValue={1}  min={1} max={10} onChange={setQtyHandler} /> </div><br />
           <div className="product-btn">
             <button className = "btn btn-primary" onClick= {(e) => {addToCartHandler(e)}}>Add to Cart</button>
           <button className = "btn btn-primary" onClick={ () => 

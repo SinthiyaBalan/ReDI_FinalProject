@@ -3,6 +3,9 @@ import { useNavigate } from "react-router-dom";
 
 function ShoppingCart({ cartItem, setCartItem }) {
 
+  let total_amount = 0;
+  let total_amount_perItem = 0;
+
   function deleteItem (e) {
     const result = cartItem.filter(i => i.id != e)
     setCartItem(result)
@@ -10,14 +13,12 @@ function ShoppingCart({ cartItem, setCartItem }) {
   }
   const navigate = useNavigate();
   console.log(cartItem);
-  // console.log('local stg:',(localStorage.getItem('cart')));
-  // const productsInCart = JSON.parse(localStorage.getItem('cart'));
-  // console.log(cart.map( i => i.name));
+  
   return (
     <div className="shopping-cart-wrapper">
       <h2 className="cart-heading">Your Shopping Cart</h2>
 
-      {/* {productsInCart && productsInCart.map(i => <div>{i.name} */}
+     
       {cartItem &&
         cartItem.map((i, index) => (
           <div className="cart-wrapper" key={index}>
@@ -31,7 +32,7 @@ function ShoppingCart({ cartItem, setCartItem }) {
             <div className="cart-details-second">
               <div className="cart-amount">
                 <h2 className="total-amount">
-                  € {Number(i.price) * Number(i.quantity)}
+                  € {total_amount_perItem = (Number(i.price) * Number(i.quantity))}
                 </h2>
               </div>
               <div className="t-qty">
@@ -40,6 +41,7 @@ function ShoppingCart({ cartItem, setCartItem }) {
               </div>
             </div>
           </div>
+          
         ))}
       <div className="btn-wrapper">
         <button
@@ -55,7 +57,13 @@ function ShoppingCart({ cartItem, setCartItem }) {
       <div className="final-amountWrapper">
         <div className="famount-wrapper">
           <h4>Total Inclv VAT </h4>
-          <h2 className="final-amount">€400</h2>
+          
+          <h2  className="final-amount"> €{
+            cartItem && cartItem.reduce((acc, cur) => {
+              return (acc + (Number(cur.quantity) * Number(cur.price)));
+            }, 0)
+          }</h2>
+
         </div>
 
         <h3 className="shipping-info">You are eligible for free delivery.</h3>

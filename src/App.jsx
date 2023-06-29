@@ -23,6 +23,7 @@ function App() {
   const [defaultqty, setDefaultqty] = useState()
   const [cartItem, setCartItem] = useState([]);
   const [product, setProduct] = useState();
+  const [users, setUsers] = useState()
 
   // console.log("cartItem",cartItem);
 
@@ -31,15 +32,20 @@ function App() {
 
 }, []);
 
+useEffect(() => {
+  axios("https://ecommerce-website-backend-2lob.onrender.com/admin").then(i => setUsers(i.data)).catch(i => console.log(i))
+
+}, []);
+
 
 
   return (
     <div data-theme="cupcake" className="app min-h-screen">
-      <Nav />
+      <Nav cartItem={cartItem} setSelectedCategory = {setSelectedCategory}/>
         <Routes >
           <Route path='/' element={<MainSection setCategories={setCategories} categories={categories} setSelectedCategory = {setSelectedCategory}/>} />
-          <Route path='/productList' element={<ProductList products={products} selectedCategory={selectedCategory} setSelectedProductId = {setSelectedProductId} />} />
-          <Route path='/productDetails' element = {<ProductDetails cartItem={cartItem} selectedProductId = {selectedProductId} qty={qty} defaultqty = {defaultqty} setQty = {setQty} setCartItem = {setCartItem} product = {product} products={products} setProduct={setProduct}/>} />
+          <Route path='/productList' element={<ProductList products={products} selectedCategory={selectedCategory} setSelectedProductId = {setSelectedProductId} setDefaultqty = {setDefaultqty}/>} />
+          <Route path='/productDetails' element = {<ProductDetails cartItem={cartItem} selectedProductId = {selectedProductId} qty={qty} setQty = {setQty} setCartItem = {setCartItem} product = {product} products={products} setProduct={setProduct}/>} />
           <Route path='/shoppingCart' element = {<ShoppingCart   cartItem={cartItem} setCartItem = {setCartItem}/>} />
           <Route path='/payment' element = {<Payment />} />
           <Route path='/adminLoginPage' element = {<AdminLogin />}/>
