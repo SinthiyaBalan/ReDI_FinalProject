@@ -1,17 +1,18 @@
 
 import './App.css';
-import Footer from './components/Footer';
-import MainSection from './components/MainSection';
-import Nav from './components/Nav'; 
+import Footer from './Components/Footer';
+import MainSection from './Components/MainSection';
+import Nav from './Components/Nav'; 
 import { Routes , Route } from 'react-router-dom'
-import ProductList from './components/ProductList';
+import ProductList from './Components/ProductList';
 import { useState } from 'react';
-import ProductDetails from './components/ProductDetails';
-import ShoppingCart from './components/ShoppingCart';
-import Payment from './components/Payment';
+import ProductDetails from './Components/ProductDetails';
+import ShoppingCart from './Components/ShoppingCart';
+import Payment from './Components/Payment';
 import React, { useEffect } from 'react';
 import axios from 'axios';
-import AdminLogin from './components/AdminLogin';
+import AdminLogin from './Components/AdminLogin';
+
 
 function App() {
 
