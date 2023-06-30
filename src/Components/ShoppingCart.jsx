@@ -32,7 +32,7 @@ function ShoppingCart({ cartItem, setCartItem }) {
             <div className="cart-details-second">
               <div className="cart-amount">
                 <h2 className="total-amount">
-                  € {total_amount_perItem = (Number(i.price) * Number(i.quantity)).toFixed(2)}
+                  € {total_amount_perItem = (Number(i.price) * Number(i.quantity))}
                 </h2>
               </div>
               <div className="t-qty">
@@ -60,7 +60,7 @@ function ShoppingCart({ cartItem, setCartItem }) {
           
           <h2  className="final-amount"> €{
             cartItem && cartItem.reduce((acc, cur) => {
-              return (acc + (Number(cur.quantity) * Number(cur.price))).toFixed(2);
+              return (acc + (Number(cur.quantity) * Number(cur.price)));
             }, 0)
           }</h2>
 
